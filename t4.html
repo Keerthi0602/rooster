@@ -1,0 +1,2467 @@
+ <html><head><meta name="viewport" content="width = device-width, initial-scale = 1 user-scalable=0">
+<!-- <link rel="stylesheet" href="/static/css/c1.css"> -->
+<!-- <script src="/static/js/j1.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+<!--Awesome Widgets from http://goo.gl/EXf6kd -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+<style>
+    hr{
+        border: red 1px solid
+    }
+    .collapsible-header{
+            background-color: grey;
+
+color: black;
+    }
+    .collapsible-body
+    {
+    }
+
+    b{
+        font-family: serif;
+        
+        font-size: 20px;
+
+    }
+    .gwt-TextBox,.gwt-TextArea,.materialize-textarea
+    {
+    		color:white;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+<body class="black red-text">
+    <nav class="nav-wrapper">
+     <div class="container"> 
+     	<a href="#" class="sidenav-trigger" data-target="mobile-links">
+     		<i class="material-icons" >menu</i>
+     	</a>
+      
+  </div>
+  </nav>
+  	<ul class="sidenav" id="mobile-links" >
+  		<li><a href="#1">Shipper</a></li>
+        <li><a href="#2">Consignee</a></li>
+        <li><a href="#3">Issuing carrier's agent</a></li>
+        <li><a href="#4">Routing and flight bookings</a></li>
+        <li><a href="#5">AWB consigment details</a></li>
+        <li><a href="#6">Issuer</a></li>
+        <li><a href="#7">Accounting Information</a></li>
+        <li><a href="#8">Shipment referente information</a></li>
+        <li><a href="#9">Charges declaration</a></li>
+        <li><a href="#10">Handling information</a></li>
+        <li><a href="#11">Rate description</a></li>
+        <li><a href="#12">Charges summary</a></li>
+        <li><a href="#13">CC charges in destination</a></li>
+        <li><a href="#14">Other charges</a></li>
+        <li><a href="#15">Shipper's certification</a></li>
+        <li><a href="#16">Carrier's execution</a></li>
+  	</ul>
+
+  <ul class="collapsible expandable ">
+<li class="active"><div class="collapsible-header" id="1">                    <b>1. Shipper</b></div>
+    <div class="collapsible-body">
+                <table id="rem1">
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td id="DI33">
+                                    <div class="gwt-Label">Account number</div>
+                                </td>
+                                <td><input type="text" class="gwt-TextBox" style="width: 187px; font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I33" name="I33"></td>
+                            </tr>
+                            <tr>
+                                <td id="DI34">
+                                    <div class="gwt-HTML">Name and address</div>
+                                </td>
+                                <td><textarea class="gwt-TextArea" rows="5" style="width: 230px; font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I34" name="I34"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <form >
+                    			  	<p>
+    									  <label>
+     										   <input type="checkbox" name="checkbox" id="c1" onclick="loc1()" />
+       										   <span>Save and Store</span>
+      									  </label>
+      							 	</p>
+      							 </form>		
+                    
+             </div></li>
+             <li class="active">
+             <div class="collapsible-header" id="2"><b>2. Consignee</b>
+</div>
+
+<div class="collapsible-body"> 
+
+                    <table id="rem2">
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td id="DI35" >
+                                    <div class="gwt-Label">Account number</div>
+                                </td>
+                                <td><input type="text" class="gwt-TextBox" style="width: 187px; font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I35" name="I35"></td>
+                            </tr>
+                            <tr>
+                                <td id="DI36">
+                                    <div class="gwt-HTML">Name and address</div>
+                                </td>
+                                <td><textarea class="gwt-TextArea" rows="5" style="width: 230px; font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I36" name="I36"></textarea></td>
+                            </tr>
+                                  
+                    </table>
+                   				  <form >
+                    			  	<p>
+    									  <label>
+     										   <input type="checkbox" name="checkbox" id="c2" onclick="loc2()"/>
+       										   <span>Save and Store</span>
+      									  </label>
+      							 	</p>
+      							 </form>
+                        </tbody>
+                </div>
+            
+                
+</div>
+</div></li>
+<li class="active"><div class="collapsible-header" id="3">                <b>3. Issuing carrier's agent</b></div>
+    <div class="collapsible-body">
+                <div style="position: relative;">
+                    <table id="rem3">
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td id="DI37">
+                                    <div class="gwt-HTML">Name and city</div>
+                                </td>
+                                <td><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I37" name="I37"></td>
+                            </tr>
+                            <tr>
+                                <td id="DI38">
+                                    <div class="gwt-HTML">IATA Code</div>
+                                </td>
+                                <td><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I38" name="I38"></td>
+                            </tr>
+                            <tr>
+                                <td id="DI39">
+                                    <div class="gwt-HTML">Account no.</div>
+                                </td>
+                                <td><input type="text" class="gwt-TextBox" style="font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I39" name="I39"></td>
+                            </tr>
+                        </tbody>
+                    </table><img class="gwt-Image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z'/></svg>" style=" height: 24px; right: 0px; top: 0px; cursor: pointer; position: absolute;">
+                    			   <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c3"/ onclick="loc3()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+                </div>
+            </div></div></li>
+<li class="active"><div class="collapsible-header" id="4">                <b>4. Routing and flight bookings</b></div>
+    <div class="collapsible-body">
+                <table id="rem4">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td id="DI40">
+                                <div class="gwt-Label">Departure</div>
+                            </td>
+                            <td><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I40" name="I40"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label">Route</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="gwt-Label" style="display: inline-block;" id="DI41">To</div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I41" name="I41">
+                                    <div class="gwt-Label" style="display: inline-block; margin-left: 8px;" id="DI42">By first carrier</div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I42" name="I42">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label"></div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="gwt-Label" style="display: inline-block;" id="DI43">To</div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I43" name="I43">
+                                    <div class="gwt-Label" style="display: inline-block; margin-left: 8px;" id="DI44">By</div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I44" name="I44">
+                                    <div class="gwt-Label" style="display: inline-block; margin-left: 8px;" id="DI45">To</div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I45" name="I45">
+                                    <div class="gwt-Label" style="display: inline-block; margin-left: 8px;" id="DI46">By</div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I46" name="I46">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label" id="DI47">Destination</div>
+                            </td>
+                            <td><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I47" name="I47"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label" id="DI48">Flight/Date</div>
+                            </td>
+                            <td>
+                                <div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I48" name="I48"></div>
+                                	<div><input type="text" class="gwt-TextBox" style="width: 95px; font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I49" name="I49"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                				   <form>
+                				   <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c4"/ onclick="loc4()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+      							</form>
+            </div>
+        </div></div></li>
+<li class="active"><div class="collapsible-header" id="5">                <b>5. AWB consigment details</b></div>
+    <div class="collapsible-body">
+                <table id="rem5">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label" id="DI50">AWB number</div>
+                            </td>
+                            <td>
+                                <div><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I50" name="I50">
+                                    <input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I51" name="I51"><span class="gwt-CheckBox gwt-CheckBox-disabled" style="margin-left: 4px;">
+                                        <input type="checkbox" value="#i52" id="I52" tabindex="0" disabled="" name="I52">
+                                        <label for="gwt-uid-8" id="DI51">assign on save</label></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label" id="DI53">Airport of departure</div>
+                            </td>
+                            <td><input type="text" class="gwt-TextBox" style="width: 49px; font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I53" name="I53"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                				  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c5"/ onclick="loc5()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+                
+ </div></li>
+</li>
+<li class="active"> <div class="collapsible-header" id="6">                <b>6. Issuer</b></div>
+<div class="collapsible-body"> 
+
+                <table id="rem6">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI54">Issued by</div>
+                            </td>
+                            <td><textarea class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I54" name="I54" required=""></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                				  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c6" onclick="loc6()"/>
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+            </div></div></li>
+<li class="active"><div class="collapsible-header" id="7">
+                <b>7. Accounting information</b></div>
+    <div class="collapsible-body">
+                <table id="rem7">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI55">Details</div>
+                            </td>
+                            <td><textarea class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I55" name="I55" required=""></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                				  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c7"/ onclick="loc7()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+ </div></div>
+</li>
+<li class="active">
+ <div class="collapsible-header" id="8">                <b>8. Shipment referente information</b></div>
+    <div class="collapsible-body"> 
+
+                <table id="rem8">
+                    
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI56">Reference number</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I56" name="I56"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI57">Information</div>
+                            </td>
+                            <td>
+                                    <input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I58" name="I58"></div>
+                                <div><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I57" name="I57"></td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                				  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c8"/ onclick="loc8()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+            </div></div></li>
+<li class="active"><div class="collapsible-header" id="9">           
+                <b>9. Charges declaration</b></div>
+    <div class="collapsible-body">
+                <table id="rem9">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI59">Currency</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I59" name="I59"></td>
+                            <td>
+                                <div class="gwt-HTML" id="DI60">CHCG</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I60" name="I60"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI61" >Value for carriage</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I61" name="I61"></td>
+                            <td>
+                                <div class="gwt-Label" >WT/VAL</div>
+                            </td>
+                            <td><select class="gwt-ListBox" style="font-size: 11pt; font-family: Consolas, Inconsolata, monospace;">
+                                    <option value="P">PPD</option>
+                                    <option value="C">COLL</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label" id="DI62" >Value for customs</div>
+                            </td>
+                            <td><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I62" name="I62"></td>
+                            <td>
+                                <div class="gwt-Label" >Other</div>
+                            </td>
+                            <td><select class="gwt-ListBox" style="font-size: 11pt; font-family: Consolas, Inconsolata, monospace;">
+                                    <option value="P">PPD</option>
+                                    <option value="C">COLL</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-Label" id="DI63">Amount of insurance</div>
+                            </td>
+                            <td><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I63" name="I63"></td>
+                        </tr>
+                    </tbody>
+                </table>
+               					  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c9"/ onclick="loc9()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+            </div>
+        </div>
+    </div></div></li></div></td></tr></tbody></table></div></li>
+<li class="active"><div class="collapsible-header" id="10">    
+        <b>10. Handling information</b></div>
+    <div class="collapsible-body">
+        <table id="rem10">
+            <colgroup>
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="gwt-HTML" id="DI64">Requirements</div>
+                    </td>
+                    <td rowspan="2"><textarea class="materialize-textarea"  style="font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I64" name="I64"></textarea></td>
+                    <td>
+                        <div class="gwt-HTML" id="DI65">SCI</div>
+                    </td>
+                    <td><input type="text" class="materialize-textarea" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I65" name="I65"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="gwt-Label" aria-hidden="true" style="display: none;">Destination</div>
+                    </td>
+                    <td><input type="text" class="gwt-TextBox" aria-hidden="true" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; display: none;" id="I66" name="I66"></td>
+                </tr>
+            </tbody>
+        </table>
+        						  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c10" onclick="loc10()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+    </div></div></li></div>
+<li class="active"><div class="collapsible-header" id="11">        <b>11. Rate description</b></div>
+    <div class="collapsible-body">
+        <table id="rem11">
+            <colgroup>
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        <div style="float: left;" id="Dup">
+                            <button data-target="modal1" class="btn modal-trigger" id="addp">Add</button>
+                            <div style="float: left; padding-bottom: 8px;"><button type="button" class="gwt-Button">Add</button><button type="button" class="gwt-Button" style="margin-left: 4px;">Modify</button><button type="button" class="gwt-Button" style="margin-left: 4px;">Remove</button></div>
+                            <div style="float: right; padding-bottom: 8px;"><img class="gwt-Image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z'/></svg>" style=" height: 24px; cursor: pointer;"><img class="gwt-Image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z'/></svg>" style=" height: 24px; cursor: pointer; padding-left: 4px;"></div>
+                            <div __gwtcellbasedwidgetimpldispatchingfocus="true" __gwtcellbasedwidgetimpldispatchingblur="true" class="GD3K2OHCED" style="position: relative; overflow: hidden; clear: both; ">
+                                <div style="position: absolute; left: 0px; top: 0px; min-width: 20px; min-height: 20px; overflow: hidden;">
+                                    <div>
+                                        <table >
+                                            <colgroup>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr __gwt_header_row="0">
+                                                    <th colspan="1" class="GD3K2OHCEC GD3K2OHCCC" __gwt_column="column-gwt-uid-223" __gwt_header="header-gwt-uid-224">Pieces</th>
+                                                    <th colspan="1" class="GD3K2OHCEC" __gwt_column="column-gwt-uid-225" __gwt_header="header-gwt-uid-226">Gross w.</th>
+                                                    <th colspan="1" class="GD3K2OHCEC" __gwt_column="column-gwt-uid-227" __gwt_header="header-gwt-uid-228">k/l</th>
+                                                    <th colspan="1" class="GD3K2OHCEC" __gwt_column="column-gwt-uid-229" __gwt_header="header-gwt-uid-230">rc</th>
+                                                    <th colspan="1" class="GD3K2OHCEC" __gwt_column="column-gwt-uid-231" __gwt_header="header-gwt-uid-232">Item no.</th>
+                                                    <th colspan="1" class="GD3K2OHCEC" __gwt_column="column-gwt-uid-233" __gwt_header="header-gwt-uid-234">Charg. w.</th>
+                                                    <th colspan="1" class="GD3K2OHCEC" __gwt_column="column-gwt-uid-235" __gwt_header="header-gwt-uid-236">Rate/Charge</th>
+                                                    <th colspan="1" class="GD3K2OHCEC" __gwt_column="column-gwt-uid-237" __gwt_header="header-gwt-uid-238">Total</th>
+                                                    <th colspan="1" class="GD3K2OHCEC GD3K2OHCMC" __gwt_column="column-gwt-uid-239" __gwt_header="header-gwt-uid-240">Nature and quantity</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div style="position: absolute; left: 0px;  bottom: 0px; min-width: 20px; min-height: 20px; overflow: hidden; display: none;">
+                                    <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                        <div style="height: 100px; "></div>
+                                    </div>
+                                    <div style="visibility: hidden; position: absolute; height: 100%; width: 100%; overflow: scroll; z-index: -1;">
+                                        <div style="; height: 200%;"></div>
+                                    </div>
+                                </div>
+                                <div style="position: absolute; left: 0px;  overflow: hidden; top: 21px; height: 229px;">
+                                    <div class="GD3K2OHCPL" style="position: relative; overflow: hidden; height: 100%;">
+                                        <div aria-hidden="true" style="position: absolute; z-index: -32767; top: -20ex; width: 10em; height: 10ex; visibility: hidden;">&nbsp;</div>
+                                        <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: -17px; bottom: -17px;">
+                                            <div style="position: absolute; zoom: 1; overflow: scroll; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                <div class="GD3K2OHCKE" style="position: relative; zoom: 1; min-width: 20px; min-height: 20px; display: block;">
+                                                    <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                        <div style="height: 807px; width: 921px;"></div>
+                                                    </div>
+                                                    <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                        <div style="width: 200%; height: 200%;"></div>
+                                                    </div>
+                                                    <table cellspacing="0" style="table-layout: fixed; " id="dimensionst" class="centered highlight">
+                                                        <colgroup>
+                                                            <col style="width: 49px;">
+                                                            <col style="width: 76px;">
+                                                            <col style="width: 31px;">
+                                                            <col style="width: 31px;">
+                                                            <col style="width: 76px;">
+                                                            <col style="width: 76px;">
+                                                            <col style="width: 85px;">
+                                                            <col style="width: 122px;">
+                                                            <col style="width: 214px;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="position: absolute; overflow: hidden; right: 0px; bottom: 0px; width: 17px; height: 0px;">
+                                            <div class="GD3K2OHCAM" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                        </div>
+                                        <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 0px; bottom: 0px; display: none;">
+                                            <div class="GD3K2OHCMN GD3K2OHCKE" style="height: 17px; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                <div class="GD3K2OHCLN GD3K2OHCBM">
+                                                    <div class="GD3K2OHCKN"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 17px;">
+                                            <div class="GD3K2OHCGM GD3K2OHCKE" style=" position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                <div class="GD3K2OHCFM GD3K2OHCDM">
+                                                    <div style="height: 707px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rem11">
+                        <div class="formPanel-FlexHorizontal" style="position: relative;"><input type="text" class="gwt-TextBox formElement-VAlign-Bottom" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I67" name="I67">
+                            <div class="formPanel-FlexVertical" style="position: relative;"><textarea class="gwt-TextArea" rows="3" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px; margin-bottom: 4px;" id="I68" name="I68"></textarea>
+                                <div class="formPanel-FlexHorizontal" style="position: relative;"><input type="text" class="gwt-TextBox" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I69" name="I69">
+                                   <input type="text" class="gwt-TextBox" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I70" name="I70"></div><input type="text" class="materialize-textarea" rows="4" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I71" name="I71"></td>
+                                </div>
+                            </div><textarea class="materialize-textarea" rows="3" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I72" name="I72"></textarea>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       							  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c11" onclick="loc11()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+    </div></div></li>
+<li class="active"><div class="collapsible-header" id="12">                <b>12. Charges summary</b></div>
+    <div class="collapsible-body">
+                <table id="rem12">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Prepaid</div>
+                            </td>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Collect</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Weight charge</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I73" name="I73"></td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I74" name="I74"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Valuation charge</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I75" name="I75"></td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I76" name="I76"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Tax</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I77" name="I77"></td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I78" name="I78"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Other charges due agent</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I79" name="I79"></td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I80" name="I80"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Other charges due carrier</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I81" name="I81"></td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I82" name="I82"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" style="display: inline-block; vertical-align: text-bottom;">Total</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I83" name="I83"></td>
+                            <td><input type="text" class="materialize-textarea" disabled="" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I84" name="I84"></td>
+                        </tr>
+                    </tbody>
+                </table>
+               					 <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c12" onclick="loc12()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+            </div></div></li>
+<li class="active"><div class="collapsible-header" id="13">                <b>13. CC charges in destination currency</b></div>
+    <div class="collapsible-body">
+                <table id="rem13">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI85">Currency conv. rates</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I85" name="I85"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI86">CC charges in dest.</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I86" name="I86"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI87">Charges at dest.</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I87" name="I87"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="gwt-HTML" id="DI88">Total collect</div>
+                            </td>
+                            <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I88" name="I88"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                				  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c13" onclick="loc13()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+            </div>
+        </div></div></li>
+<li class="active"><div class="collapsible-header" id="14">                <b>14. Other charges</b></div>
+    <div class="collapsible-body">
+                <table id="rem14">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div style="float: left;">
+                                    <div style="float: left; padding-bottom: 8px;"><button type="button" class="gwt-Button">Add</button><button type="button" class="gwt-Button" disabled="" style="margin-left: 4px;">Modify</button><button type="button" class="gwt-Button" disabled="" style="margin-left: 4px;">Remove</button></div>
+                                    <div style="float: right; padding-bottom: 8px;"><img class="gwt-Image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z'/></svg>" style=" height: 24px; cursor: pointer;"><img class="gwt-Image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z'/></svg>" style=" height: 24px; cursor: pointer; padding-left: 4px;"></div>
+                                    <div __gwtcellbasedwidgetimpldispatchingfocus="true" __gwtcellbasedwidgetimpldispatchingblur="true" class="GD3K2OHCED" style="position: relative; overflow: hidden; clear: both; height: 150px;">
+                                        <div style="position: absolute; left: 0px;  top: 0px; min-width: 20px; min-height: 20px; overflow: hidden;">
+                                            <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                <div style="height: 121px; "></div>
+                                            </div>
+                                            <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                <div style=" height: 200%;"></div>
+                                            </div>
+                                            <div>
+                                                <table cellspacing="0" style="table-layout: fixed; ">
+                                                    <colgroup>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr __gwt_header_row="0">
+                                                            <th colspan="1" class="GD3K2OHCEC GD3K2OHCCC" __gwt_column="column-gwt-uid-35" __gwt_header="header-gwt-uid-36">Description</th>
+                                                            <th colspan="1" class="GD3K2OHCEC GD3K2OHCCC" __gwt_column="column-gwt-uid-37" __gwt_header="header-gwt-uid-38">Amount</th>
+                                                            <th colspan="1" class="GD3K2OHCEC GD3K2OHCMC" __gwt_column="column-gwt-uid-39" __gwt_header="header-gwt-uid-40">Entitlement</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div style="position: absolute; left: 0px;  bottom: 0px; min-width: 20px; min-height: 20px; overflow: hidden; display: none;">
+                                            <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                <div style="height: 100px; "></div>
+                                            </div>
+                                            <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                <div style=" height: 200%;"></div>
+                                            </div>
+                                        </div>
+                                        <div style="position: absolute; left: 0px; overflow: hidden; top: 21px; height: 129px;">
+                                            <div class="GD3K2OHCPL" style="position: relative; overflow: hidden; height: 100%;">
+                                                <div aria-hidden="true" style="position: absolute; z-index: -32767; top: -20ex; width: 10em; height: 10ex; visibility: hidden;">&nbsp;</div>
+                                                <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: -17px; bottom: -17px;">
+                                                    <div style="position: absolute; zoom: 1; overflow: scroll; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                        <div class="GD3K2OHCKE" style="position: relative; zoom: 1; min-width: 20px; min-height: 20px; display: block;">
+                                                            <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                                <div style="height: 120px; "></div>
+                                                            </div>
+                                                            <div style="visibility: hidden; position: absolute; height: 100%;  overflow: scroll; z-index: -1;">
+                                                                <div style=" height: 200%;"></div>
+                                                            </div>
+                                                            <table align="center">
+                                                                <colgroup>
+                                                                    <col>
+                                                                </colgroup>
+                                                                <tbody></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="position: absolute; overflow: hidden; right: 0px; bottom: 0px; width: 0px; height: 0px;">
+                                                    <div class="GD3K2OHCAM" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                </div>
+                                                <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 0px; bottom: 0px; display: none;">
+                                                    <div class="GD3K2OHCMN GD3K2OHCKE" style="height: 17px; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                        <div class="GD3K2OHCLN GD3K2OHCBM">
+                                                            <div class="GD3K2OHCKN"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 17px; display: none;">
+                                                    <div class="GD3K2OHCGM GD3K2OHCKE" style=" position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                        <div class="GD3K2OHCFM GD3K2OHCDM">
+                                                            <div style="height: 2px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                				   <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c14" onclick="loc14()">
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+            </div></div></li>
+<li class="active"><div class="collapsible-header" id="15">                <b>15. Shipper's certification</b></div>
+    <div class="collapsible-body">
+                <div style="position: relative;">
+                    <table id="rem15">
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"><textarea class="materialize-textarea" rows="2" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I89" name="I89"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="gwt-HTML" id="DI90">Signature</div>
+                                </td>
+                                <td><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I90" name="I90"></td>
+                            </tr>
+                        </tbody>
+                    </table><img class="gwt-Image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z'/></svg>" style=" height: 24px; right: 0px; top: 0px; cursor: pointer; position: absolute;">
+                    			  <p>
+    								  <label>
+     									   <input type="checkbox" name="checkbox" id="c15" onclick="loc15()"/>
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+                </div>
+                
+ </div>
+</li>
+<li class="active">
+ <div class="collapsible-header" id="16">                <b>16. Carrier's execution</b></div>
+    <div class="collapsible-body" id="rem16"> 
+
+                <div style="position: relative;">
+                    <table >
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"><textarea class="materialize-textarea" rows="2" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin: 0px; height: 77px;" id="I91" name="I91"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="gwt-HTML" id="DI92">Date</div>
+                                </td>
+                                <td>
+                                    <div><input type="text" class="materialize-textarea"  style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I92" name="I92">
+                                        <img class="gwt-Image" id="DI92" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z'/></svg>" style=" height: 24px; cursor: pointer; vertical-align: middle;">
+                                        <div class="gwt-HTML" style="display: inline-block; margin-left: 8px;"id="DI93">Place</div><input type="text" class="gwt-TextBox" style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase; margin-left: 4px;" id="I93" name="I93">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="gwt-HTML" id="DI94">Signature</div>
+                                </td>
+                                <td><input type="text" class="materialize-textarea"      style=" font-size: 11pt; font-family: Consolas, Inconsolata, monospace; text-transform: uppercase;" id="I94" name="I94"></td>
+                            </tr>
+                        </tbody>
+                    </table><img class="gwt-Image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgb(97,97,97)' d='M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z'/></svg>" style="width: 24px; height: 24px; right: 0px; top: 0px; cursor: pointer; position: absolute;">
+</div></div> 
+                    			  <p>
+    								  <label> &nbsp;&nbsp;&nbsp;&nbsp;
+     									   <input type="checkbox" name="checkbox" id="c16" onclick="loc16()"/>
+       									   <span>Save and Store</span>
+      								  </label>
+      							  </p>
+             
+</head>
+<style>
+    .tabs .tab a.active, .tabs .tab a:focus.active {
+    background-color: blue;
+}
+    .footer1{
+bottom: 0px;
+    }
+</style>
+			<script>
+				
+			</script>
+			<script type="text/javascript">
+				function loc1() {
+								var value1=document.getElementById('I33').value;
+								var value2=document.getElementById('I34').value;
+								localStorage.setItem('Account Number1',value1);
+								localStorage.setItem('Name and Address1',value2);
+								if(value1==0 && value2==0)
+								{
+									
+									document.getElementById("c1").checked=false;
+								}
+								else if(value1!=0 && value2!=0)
+								{
+									document.getElementById("rem1").style.display = "none";
+									}
+
+								else if(value1!=0)
+								{
+									document.getElementById("DI33").style.display = "none";
+									document.getElementById("I33").style.display = "none";
+									
+									}
+								else if(value2!=0)
+								{
+									document.getElementById("DI34").style.display = "none";
+									document.getElementById("I34").style.display = "none";
+									
+									}
+								
+								}
+				function loc2() {
+								var value3=document.getElementById('I35').value;
+								var value4=document.getElementById('I36').value;
+								localStorage.setItem('Account Number2',value3);
+								localStorage.setItem('Name and Address2',value4);
+								if(value3==0 && value4==0)
+								{
+									
+									document.getElementById("c2").checked=false;
+								}
+								else if(value3!=0 && value4!=0)
+								{
+									document.getElementById("rem2").style.display = "none";
+									}
+
+								else if(value3!=0)
+								{
+									document.getElementById("DI35").style.display = "none";
+									document.getElementById("I35").style.display = "none";
+									
+									}
+								else if(value4!=0)
+								{
+									document.getElementById("DI36").style.display = "none";
+									document.getElementById("I36").style.display = "none";
+									
+									}
+								
+								}
+				function loc3() {
+								var value5=document.getElementById('I37').value;
+								var value6=document.getElementById('I38').value;
+								var value7=document.getElementById('I39').value;
+								localStorage.setItem('Name and City',value5)
+								localStorage.setItem('IATA Code',value6)
+								localStorage.setItem('Account Number3',value7);
+								if(value5==0 && value6==0 && value7==0) 
+								{
+									
+									document.getElementById("c3").checked=false;
+								}
+								else if(value5!=0 && value6!=0 && value7!=0)
+								{
+									document.getElementById("rem3").style.display = "none";
+									}
+								else if(value5!=0 && value6!=0)
+								{
+									document.getElementById("DI37").style.display = "none";
+									document.getElementById("I37").style.display = "none";
+									document.getElementById("DI38").style.display = "none";
+									document.getElementById("I38").style.display = "none";
+									
+									}
+								else if(value6!=0 && value7!=0)
+								{
+									document.getElementById("DI38").style.display = "none";
+									document.getElementById("I38").style.display = "none";
+									document.getElementById("DI39").style.display = "none";
+									document.getElementById("I39").style.display = "none";
+									
+									}
+								else if(value5!=0 && value7!=0)
+								{
+									document.getElementById("DI37").style.display = "none";
+									document.getElementById("I37").style.display = "none";
+									document.getElementById("DI39").style.display = "none";
+									document.getElementById("I39").style.display = "none";
+									
+									}
+								else if(value5!=0)
+								{
+									document.getElementById("DI37").style.display = "none";
+									document.getElementById("I37").style.display = "none";
+								
+									}
+								else if(value6!=0)
+								{
+									document.getElementById("DI38").style.display = "none";
+									document.getElementById("I38").style.display = "none";
+									
+									}
+								else if(value7!=0)
+								{
+									document.getElementById("DI39").style.display = "none";
+									document.getElementById("I39").style.display = "none";
+									
+									}
+								}
+				function loc4() {
+								var value8=document.getElementById('I40').value;
+								var value9=document.getElementById('I41').value;
+								var value10=document.getElementById('I42').value;
+								var value11=document.getElementById('I43').value;
+								var value12=document.getElementById('I44').value;
+								var value13=document.getElementById('I45').value;
+								var value14=document.getElementById('I46').value;
+								var value15=document.getElementById('I47').value;
+								var value16=document.getElementById('I48').value;
+								var value17=document.getElementById('I49').value;
+								localStorage.setItem('Departure1',value8);
+								localStorage.setItem('To1',value9)
+								localStorage.setItem('Route-By first carrier',value10);
+								localStorage.setItem('To2',value11);
+								localStorage.setItem('By1',value12);
+								localStorage.setItem('To3',value13)
+								localStorage.setItem('By2',value14);
+								localStorage.setItem('Destination1',value15)
+								localStorage.setItem('Flight1',value16);
+								localStorage.setItem('Date1',value17);
+								if(value8==0 && value9==0 && value10==0 && value11==0 && value12==0 && value13==0 && value14==0 && value15==0 && value16==0 && value17==0) 
+								{
+									
+									document.getElementById("c4").checked=false;
+								}
+								if(value8!=0 && value9!=0 && value10!=0 && value11!=0 && value12!=0 && value13!=0 && value14!=0 && value15!=0 && value16!=0 && value17!=0)
+								{
+									document.getElementById("rem4").style.display = "none";
+									
+									
+								}
+								 if(value8!=0)
+								 {
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+									
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+																	
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+								
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+									
+								}
+								}
+								if(value9!=0)
+								 {
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+									
+									
+								 if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+									
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+									
+								}
+								}
+								else if(value10!=0)
+								 {
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+									
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+									
+																	}
+								if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+								}
+								}
+								else if(value11!=0)
+								 {
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+									
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+									
+								
+								}
+								 if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+								}
+								}
+								else if(value12!=0)
+								 {
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+								}
+								if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+								}
+								}
+								else if(value13!=0)
+								 {
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+								}
+								 if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+								}
+								}
+								else if(value14!=0)
+								 {
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+								}
+								 if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+								}
+								}
+								else if(value15!=0)
+								 {
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+									
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+								
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+									
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+									
+								}
+								 if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+							
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+									
+								}
+								}
+								else if(value16!=0)
+								 {
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+									
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+																									}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+								
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+								
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+									
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+									
+								}
+								 if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+									
+									
+								}
+								if(value17!=0)
+								{
+									document.getElementById("I49").style.display = "none";
+									
+									
+								}
+								}
+								else if(value17!=0)
+								 {
+									
+									document.getElementById("I49").style.display = "none";
+									
+									
+								 if(value9!=0)
+								{
+									document.getElementById("DI41").style.display = "none";
+									document.getElementById("I41").style.display = "none";
+									
+																	}
+								if(value10!=0)
+								{
+									document.getElementById("DI42").style.display = "none";
+									document.getElementById("I42").style.display = "none";
+									
+								
+								}
+								 if(value11!=0)
+								{
+									document.getElementById("DI43").style.display = "none";
+									document.getElementById("I43").style.display = "none";
+									
+									
+								}
+								if(value12!=0)
+								{
+									document.getElementById("DI44").style.display = "none";
+									document.getElementById("I44").style.display = "none";
+								
+									
+								}
+								 if(value13!=0)
+								{
+									document.getElementById("DI45").style.display = "none";
+									document.getElementById("I45").style.display = "none";
+							
+									
+								}
+								 if(value14!=0)
+								{
+									document.getElementById("DI46").style.display = "none";
+									document.getElementById("I46").style.display = "none";
+									
+									
+								}
+								 if(value15!=0)
+								{
+									document.getElementById("DI47").style.display = "none";
+									document.getElementById("I47").style.display = "none";
+									
+									
+								}
+								 if(value16!=0)
+								{
+									document.getElementById("DI48").style.display = "none";
+									document.getElementById("I48").style.display = "none";
+								
+									
+								}
+								if(value8!=0)
+								{
+									document.getElementById("DI40").style.display = "none";
+									document.getElementById("I40").style.display = "none";
+								
+									
+								}
+								}
+								}
+				function loc5() {
+								var value18=document.getElementById('I50').value;
+								var value19=document.getElementById('I51').value;
+								var value20=document.getElementById('I53').value;
+								localStorage.setItem('AWB Number',value18);
+								localStorage.setItem('assign on save',value19)
+								localStorage.setItem('Airport of Departure',value20);
+								if(value18==0 && value19==0 && value20==0) 
+								{
+									
+									document.getElementById("c5").checked=false;
+								}
+								else if(value18!=0 && value19!=0 && value20!=0)
+								{
+									document.getElementById("rem5").style.display = "none";
+									}
+								else if(value18!=0 && value19!=0)
+								{
+									document.getElementById("DI50").style.display = "none";
+									document.getElementById("I50").style.display = "none";
+									document.getElementById("DI51").style.display = "none";
+									document.getElementById("I51").style.display = "none";
+									
+									}
+								else if(value19!=0 && value20!=0)
+								{
+									document.getElementById("DI51").style.display = "none";
+									document.getElementById("I51").style.display = "none";
+									document.getElementById("DI53").style.display = "none";
+									document.getElementById("I53").style.display = "none";
+									
+									}
+								else if(value18!=0 && value20!=0)
+								{
+									document.getElementById("DI50").style.display = "none";
+									document.getElementById("I50").style.display = "none";
+									document.getElementById("DI53").style.display = "none";
+									document.getElementById("I53").style.display = "none";
+							
+									}
+								else if(value18!=0)
+								{
+									document.getElementById("DI50").style.display = "none";
+									document.getElementById("I50").style.display = "none";
+									
+									}
+								else if(value19!=0)
+								{
+									document.getElementById("DI51").style.display = "none";
+									document.getElementById("I51").style.display = "none";
+								
+									}
+								else if(value20!=0)
+								{
+									document.getElementById("DI53").style.display = "none";
+									document.getElementById("I53").style.display = "none";
+						
+									}
+
+								}
+				function loc6() {
+								var value21=document.getElementById('I54').value;
+								localStorage.setItem('Issued by',value21);
+								if(value21==0) 
+								{
+									
+									document.getElementById("c6").checked=false;
+								}
+								else if(value21!=0)
+								{
+									document.getElementById("DI54").style.display = "none";
+									document.getElementById("I54").style.display = "none";
+									}
+								}
+				function loc7() {
+								var value22=document.getElementById('I55').value;
+								localStorage.setItem('Details',value22);
+								if(value22==0) 
+								{
+									
+									document.getElementById("c7").checked=false;
+								}
+								if(value22!=0)
+								{
+									document.getElementById("DI55").style.display = "none";
+									document.getElementById("I55").style.display = "none";
+									}
+								}
+				function loc8() {
+								var value23=document.getElementById('I56').value;
+								var value24=document.getElementById('I58').value;
+								var value25=document.getElementById('I57').value;
+								localStorage.setItem('Reference Number',value23);
+								localStorage.setItem('Information1',value24);
+								localStorage.setItem('Information2',value25);
+								if(value23==0 && value24==0 && value25==0) 
+								{
+									
+									document.getElementById("c8").checked=false;
+								}
+								else if(value23!=0 && value24!=0 && value25!=0)
+								{
+									document.getElementById("rem8").style.display = "none";
+									}
+								else if(value23!=0 && value24!=0)
+								{
+									document.getElementById("DI56").style.display = "none";
+									document.getElementById("I56").style.display = "none";
+									document.getElementById("DI58").style.display = "none";
+									document.getElementById("I58").style.display = "none";
+									
+									}
+								else if(value24!=0 && value25!=0)
+								{
+									document.getElementById("DI58").style.display = "none";
+									document.getElementById("I58").style.display = "none";
+									document.getElementById("I57").style.display = "none";
+									
+									}
+								else if(value23!=0 && value25!=0)
+								{
+									document.getElementById("DI56").style.display = "none";
+									document.getElementById("I56").style.display = "none";
+									document.getElementById("I57").style.display = "none";
+									
+									}
+								else if(value23!=0)
+								{
+									document.getElementById("DI56").style.display = "none";
+									document.getElementById("I56").style.display = "none";
+									
+									}
+								else if(value24!=0)
+								{
+									document.getElementById("DI58").style.display = "none";
+									document.getElementById("I58").style.display = "none";
+								
+									}
+								else if(value25!=0)
+								{
+									document.getElementById("I57").style.display = "none";
+									
+									}
+
+								}
+				function loc9() {
+								var value26=document.getElementById('I59').value;
+								var value27=document.getElementById('I60').value;
+								var value28=document.getElementById('I61').value;
+								var value29=document.getElementById('I62').value;
+								var value30=document.getElementById('I63').value;
+								localStorage.setItem('Currency',value26);
+								localStorage.setItem('CHCG',value27);
+								localStorage.setItem('Value of carriage',value28);
+								localStorage.setItem('Value of customs',value29);
+								localStorage.setItem('Amount of insurance',value30);
+								if(value26==0 && value27==0 && value28==0 && value29==0 && value30==0) 
+								{
+									
+									document.getElementById("c9").checked=false;
+								}
+								else if(value26!=0 && value27!=0 && value28!=0 && value29!=0 && value30!=0)
+								{
+									document.getElementById("rem9").style.display = "none";
+									}
+								
+								if(value30!=0)
+								{
+									document.getElementById("DI63").style.display = "none";
+									document.getElementById("I63").style.display = "none";
+								
+									
+					
+								if(value28!=0)
+								{
+									document.getElementById("DI61").style.display = "none";
+									document.getElementById("I61").style.display = "none";
+									
+									
+								}
+								if(value27!=0)
+								{
+									document.getElementById("DI60").style.display = "none";
+									document.getElementById("I60").style.display = "none";
+									
+								
+								}
+								if(value26!=0)
+								{
+									document.getElementById("DI59").style.display = "none";
+									document.getElementById("I59").style.display = "none";
+									
+									
+								}							
+								if(value29!=0)
+								{
+									document.getElementById("DI62").style.display = "none";
+									document.getElementById("I62").style.display = "none";
+								
+									
+								}
+								}
+								else if(value28!=0)
+								{
+									document.getElementById("DI61").style.display = "none";
+									document.getElementById("I61").style.display = "none";
+									
+									
+					
+								if(value30!=0)
+								{
+									document.getElementById("DI63").style.display = "none";
+									document.getElementById("I63").style.display = "none";
+									
+									
+								}
+								if(value27!=0)
+								{
+									document.getElementById("DI60").style.display = "none";
+									document.getElementById("I60").style.display = "none";
+									
+								
+								}
+								if(value26!=0)
+								{
+									document.getElementById("DI59").style.display = "none";
+									document.getElementById("I59").style.display = "none";
+								
+									
+								}							
+								if(value29!=0)
+								{
+									document.getElementById("DI62").style.display = "none";
+									document.getElementById("I62").style.display = "none";
+									
+								}
+								}
+								else if(value27!=0)
+								{
+									document.getElementById("DI60").style.display = "none";
+									document.getElementById("I60").style.display = "none";
+									
+									
+					
+								if(value30!=0)
+								{
+									document.getElementById("DI63").style.display = "none";
+									document.getElementById("I63").style.display = "none";
+									
+									
+								}
+								if(value28!=0)
+								{
+									document.getElementById("DI61").style.display = "none";
+									document.getElementById("I61").style.display = "none";
+								
+								
+								}
+								if(value26!=0)
+								{
+									document.getElementById("DI59").style.display = "none";
+									document.getElementById("I59").style.display = "none";
+							
+									
+								}							
+								if(value29!=0)
+								{
+									document.getElementById("DI62").style.display = "none";
+									document.getElementById("I62").style.display = "none";
+								
+									
+								}
+								}
+								else if(value26!=0)
+								{
+									document.getElementById("DI59").style.display = "none";
+									document.getElementById("I59").style.display = "none";
+									
+									
+									
+					
+								if(value30!=0)
+								{
+									document.getElementById("DI63").style.display = "none";
+									document.getElementById("I63").style.display = "none";
+								
+									
+								}
+								if(value27!=0)
+								{
+									document.getElementById("DI60").style.display = "none";
+									document.getElementById("I60").style.display = "none";
+									
+								
+								}
+								if(value28!=0)
+								{
+									document.getElementById("DI61").style.display = "none";
+									document.getElementById("I61").style.display = "none";
+								
+									
+								}							
+								if(value29!=0)
+								{
+									document.getElementById("DI62").style.display = "none";
+									document.getElementById("I62").style.display = "none";
+								
+									
+								}
+								}
+								else if(value26!=0)
+								{
+									
+									document.getElementById("DI62").style.display = "none";
+									document.getElementById("I62").style.display = "none";
+									
+									
+					
+								if(value30!=0)
+								{
+									document.getElementById("DI63").style.display = "none";
+									document.getElementById("I63").style.display = "none";
+								
+									
+								}
+								if(value27!=0)
+								{
+									document.getElementById("DI60").style.display = "none";
+									document.getElementById("I60").style.display = "none";
+									
+								
+								}
+								if(value28!=0)
+								{
+									document.getElementById("DI61").style.display = "none";
+									document.getElementById("I61").style.display = "none";
+									
+									
+								}							
+								if(value28!=0)
+								{
+									document.getElementById("DI59").style.display = "none";
+									document.getElementById("I59").style.display = "none";
+									
+									
+								}
+								}
+							}
+				function loc10() {
+								var value31=document.getElementById('I64').value;
+								var value32=document.getElementById('I65').value;
+								localStorage.setItem('Requirements',value31);
+								localStorage.setItem('SCI',value32);
+								if(value31==0 && value32==0)
+								{
+									
+									document.getElementById("c10").checked=false;
+								}
+								else if(value31!=0 && value32!=0)
+								{
+									document.getElementById("rem10").style.display = "none";
+									}
+
+								else if(value31!=0)
+								{
+									document.getElementById("DI64").style.display = "none";
+									document.getElementById("I64").style.display = "none";
+								
+									}
+								else if(value32!=0)
+								{
+									document.getElementById("DI65").style.display = "none";
+									document.getElementById("I65").style.display = "none";
+									
+									}
+								}
+				function loc11() {
+								var value34=document.getElementById('I68').value;
+								var value37=document.getElementById('I71').value;
+								var value38=document.getElementById('I72').value;
+								localStorage.setItem('Rate2',value34);
+								localStorage.setItem('Rate5',value37);
+								localStorage.setItem('Rate6',value38);
+								if(value34==0 && value37==0 && value38==0) 
+								{
+									
+									document.getElementById("c11").checked=false;
+								}
+								else if(value34!=0 && value37!=0 && value38!=0)
+								{
+									document.getElementById("I72").style.display = "none";
+									document.getElementById("rem11").style.display = "none";
+									}
+								else if(value34!=0 && value37!=0)
+								{
+									document.getElementById("I68").style.display = "none";
+									document.getElementById("I71").style.display = "none";
+								
+									}
+								else if(value34!=0 && value38!=0)
+								{
+									document.getElementById("I68").style.display = "none";
+									document.getElementById("I72").style.display = "none";
+									document.getElementById("Dup").style.display = "none";
+									
+									}
+								else if(value37!=0 && value38!=0)
+								{
+									document.getElementById("I71").style.display = "none";
+									document.getElementById("I72").style.display = "none";
+									document.getElementById("Dup").style.display = "none";
+									
+									}
+								else if(value34!=0)
+								{
+									document.getElementById("I68").style.display = "none";
+								
+									}
+								else if(value37!=0)
+								{
+									document.getElementById("I71").style.display = "none";
+								
+									}
+								else if(value38!=0)
+								{
+									document.getElementById("I72").style.display = "none";
+									document.getElementById("Dup").style.display = "none";
+									
+									}
+								}
+				function loc12() {
+								
+								var value41=document.getElementById('I75').value;
+								var value42=document.getElementById('I76').value;
+								var value43=document.getElementById('I77').value;
+								var value44=document.getElementById('I78').value;
+								
+								localStorage.setItem('Valuation Charge1',value41);
+								localStorage.setItem('Valuation Charge2',value42);
+								localStorage.setItem('Tax1',value43);
+								localStorage.setItem('Tax2',value44);
+								if(value41==0 && value42==0 && value43==0 && value44==0) 
+								{
+									
+									document.getElementById("c12").checked=false;
+								}
+								else if(value41!=0 && value42!=0 && value43!=0 && value44!=0)
+								{
+									document.getElementById("rem12").style.display = "none";
+									}
+								else if(value41!=0 && value42!=0 && value43!=0)
+								{
+									
+									document.getElementById("I75").style.display = "none";
+									document.getElementById("I76").style.display = "none";
+									document.getElementById("I77").style.display = "none";
+									
+									}
+								else if(value42!=0 && value43!=0 && value44!=0)
+								{
+									
+									document.getElementById("I76").style.display = "none";
+									document.getElementById("I77").style.display = "none";
+									document.getElementById("I78").style.display = "none";
+									
+									}
+								else if(value43!=0 && value44!=0 && value41!=0)
+								{
+									
+									document.getElementById("I77").style.display = "none";
+									document.getElementById("I78").style.display = "none";
+									document.getElementById("I75").style.display = "none";
+									
+									}
+								else if(value41!=0 && value42!=0)
+								{
+									document.getElementById("I75").style.display = "none";
+									document.getElementById("I76").style.display = "none";
+									
+									}
+								else if(value41!=0 && value43!=0)
+								{
+									document.getElementById("I75").style.display = "none";
+									document.getElementById("I77").style.display = "none";
+									
+									}
+								else if(value41!=0 && value44!=0)
+								{
+									document.getElementById("I75").style.display = "none";
+									document.getElementById("I78").style.display = "none";
+									}
+								else if(value42!=0 && value43!=0)
+								{
+									document.getElementById("I76").style.display = "none";
+									document.getElementById("I77").style.display = "none";
+									
+									}
+								else if(value42!=0 && value44!=0)
+								{
+									document.getElementById("I76").style.display = "none";
+									document.getElementById("I78").style.display = "none";
+									
+									}
+								else if(value43!=0 && value44!=0)
+								{
+									document.getElementById("I77").style.display = "none";
+									document.getElementById("I78").style.display = "none";
+									
+									}
+
+								else if(value41!=0)
+								{
+									document.getElementById("I75").style.display = "none";
+									
+									}
+								else if(value42!=0)
+								{
+									document.getElementById("I76").style.display = "none";
+									
+									}
+								else if(value43!=0)
+								{
+									document.getElementById("I77").style.display = "none";
+									document.getElementById("Dup").style.display = "none";
+								
+									}
+
+								else if(value44!=0)
+								{
+									document.getElementById("I78").style.display = "none";
+									
+									}
+								}
+				function loc13() {
+								var value51=document.getElementById('I85').value;
+								var value52=document.getElementById('I86').value;
+								var value53=document.getElementById('I87').value;
+								var value54=document.getElementById('I88').value;
+								localStorage.setItem('Currency conv. rates',value51);
+								localStorage.setItem('CC Charges at dest.',value52);
+								localStorage.setItem('Charges at dest.',value53);
+								localStorage.setItem('Total Collect',value54);
+								if(value51==0 && value52==0 && value53==0 && value54==0) 
+								{
+									
+									document.getElementById("c13").checked=false;
+								}
+								else if(value51!=0 && value52!=0 && value53!=0 && value54!=0)
+								{
+									document.getElementById("rem13").style.display = "none";
+									}
+								else if(value51!=0 && value52!=0 && value53!=0)
+								{
+									document.getElementById("DI85").style.display = "none";
+									document.getElementById("DI86").style.display = "none";
+									document.getElementById("DI87").style.display = "none";
+									document.getElementById("I85").style.display = "none";
+									document.getElementById("I86").style.display = "none";
+									document.getElementById("I87").style.display = "none";
+				
+									}
+								else if(value52!=0 && value53!=0 && value54!=0)
+								{
+									document.getElementById("DI86").style.display = "none";
+									document.getElementById("DI87").style.display = "none";
+									document.getElementById("DI88").style.display = "none";
+									document.getElementById("I86").style.display = "none";
+									document.getElementById("I87").style.display = "none";
+									document.getElementById("I88").style.display = "none";
+									
+									}
+								else if(value53!=0 && value54!=0 && value51!=0)
+								{
+									document.getElementById("DI87").style.display = "none";
+									document.getElementById("DI88").style.display = "none";
+									document.getElementById("DI85").style.display = "none";
+									document.getElementById("I87").style.display = "none";
+									document.getElementById("I88").style.display = "none";
+									document.getElementById("I85").style.display = "none";
+									
+									}
+								else if(value51!=0 && value52!=0)
+								{
+									document.getElementById("DI85").style.display = "none";
+									document.getElementById("DI86").style.display = "none";
+									document.getElementById("I85").style.display = "none";
+									document.getElementById("I86").style.display = "none";
+							
+									}
+								else if(value51!=0 && value53!=0)
+								{
+									document.getElementById("DI85").style.display = "none";
+									document.getElementById("DI87").style.display = "none";
+									document.getElementById("I85").style.display = "none";
+									document.getElementById("I87").style.display = "none";
+							
+									}
+								else if(value51!=0 && value54!=0)
+								{
+									document.getElementById("I85").style.display = "none";
+									document.getElementById("I88").style.display = "none";
+									
+									}
+								else if(value52!=0 && value53!=0)
+								{
+									document.getElementById("I86").style.display = "none";
+									document.getElementById("I87").style.display = "none";
+								
+									}
+								else if(value52!=0 && value54!=0)
+								{
+									document.getElementById("DI86").style.display = "none";
+									document.getElementById("DI88").style.display = "none";
+									document.getElementById("I86").style.display = "none";
+									document.getElementById("I88").style.display = "none";
+								
+									}
+								else if(value53!=0 && value54!=0)
+								{
+									document.getElementById("ID87").style.display = "none";
+									document.getElementById("ID88").style.display = "none";
+									document.getElementById("I87").style.display = "none";
+									document.getElementById("I88").style.display = "none";
+									
+									}
+
+								else if(value51!=0)
+								{
+									document.getElementById("DI85").style.display = "none";
+									document.getElementById("I85").style.display = "none";
+						
+									}
+								else if(value52!=0)
+								{
+									document.getElementById("DI86").style.display = "none";
+									document.getElementById("I86").style.display = "none";
+									
+									}
+								else if(value53!=0)
+								{
+									document.getElementById("DI87").style.display = "none";
+									document.getElementById("I87").style.display = "none";
+							
+									}
+
+								else if(value54!=0)
+								{
+									document.getElementById("DI88").style.display = "none";
+									document.getElementById("I88").style.display = "none";
+								
+									}
+								}
+				function loc14() {
+									document.getElementById("rem14").style.display = "none";
+								}
+				function loc15() {
+								var value55=document.getElementById('I89').value;
+								var value56=document.getElementById('I90').value;
+								localStorage.setItem('Shipper certification',value55);
+								localStorage.setItem('Signature',value56);
+								if(value55==0 && value56==0)
+								{
+									
+									document.getElementById("c15").checked=false;
+								}
+								else if(value55!=0 && value56!=0)
+								{
+									document.getElementById("rem15").style.display = "none";
+									}
+
+								else if(value55!=0)
+								{
+									document.getElementById("I89").style.display = "none";
+								
+									}
+								else if(value56!=0)
+								{
+									document.getElementById("DI90").style.display = "none";
+									document.getElementById("I90").style.display = "none";
+								
+									}
+								
+								}
+				function loc16() {
+								var value56=document.getElementById('I91').value;
+								var value57=document.getElementById('I92').value;
+								var value58=document.getElementById('I93').value;
+								var value59=document.getElementById('I94').value;
+								localStorage.setItem('Carrier execution',value56);
+								localStorage.setItem('Date',value57);
+								localStorage.setItem('Place',value58);
+								localStorage.setItem('Signature',value59);
+								if(value56==0 && value57==0 && value58==0 && value59==0) 
+								{
+									
+									document.getElementById("c16").checked=false;
+								}
+								else if(value56!=0 && value57!=0 && value58!=0 && value59!=0)
+								{
+									document.getElementById("rem16").style.display = "none";
+									}
+								else if(value56!=0 && value57!=0 && value58!=0)
+								{
+									document.getElementById("DI92").style.display = "none";
+									document.getElementById("DI93").style.display = "none";
+									document.getElementById("I91").style.display = "none";
+									document.getElementById("I92").style.display = "none";
+									document.getElementById("I93").style.display = "none";
+									
+									}
+								else if(value57!=0 && value58!=0 && value59!=0)
+								{
+									document.getElementById("DI92").style.display = "none";
+									document.getElementById("DI93").style.display = "none";
+									document.getElementById("DI94").style.display = "none";
+									document.getElementById("I92").style.display = "none";
+									document.getElementById("I93").style.display = "none";
+									document.getElementById("I94").style.display = "none";
+								
+									}
+								else if(value58!=0 && value59!=0 && value56!=0)
+								{
+									document.getElementById("DI93").style.display = "none";
+									document.getElementById("DI94").style.display = "none";
+									document.getElementById("I93").style.display = "none";
+									document.getElementById("I94").style.display = "none";
+									document.getElementById("I91").style.display = "none";
+								
+									}
+								else if(value56!=0 && value57!=0)
+								{
+									document.getElementById("DI92").style.display = "none";
+									document.getElementById("I91").style.display = "none";
+									document.getElementById("I92").style.display = "none";
+								
+									}
+								else if(value56!=0 && value58!=0)
+								{
+									document.getElementById("DI93").style.display = "none";
+									document.getElementById("I91").style.display = "none";
+									document.getElementById("I93").style.display = "none";
+									
+									}
+								else if(value56!=0 && value59!=0)
+								{
+									document.getElementById("DI94").style.display = "none";
+									document.getElementById("I91").style.display = "none";
+									document.getElementById("I94").style.display = "none";
+							
+									}
+								else if(value57!=0 && value58!=0)
+								{
+									document.getElementById("DI92").style.display = "none";
+									document.getElementById("DI93").style.display = "none";
+									document.getElementById("I92").style.display = "none";
+									document.getElementById("I93").style.display = "none";
+									
+									}
+								else if(value57!=0 && value59!=0)
+								{
+									document.getElementById("DI92").style.display = "none";
+									document.getElementById("DI94").style.display = "none";
+									document.getElementById("I92").style.display = "none";
+									document.getElementById("I94").style.display = "none";
+									
+									}
+								else if(value56!=0 && value59!=0)
+								{
+									document.getElementById("ID94").style.display = "none";
+									document.getElementById("I91").style.display = "none";
+									document.getElementById("I94").style.display = "none";
+						
+									}
+
+								else if(value56!=0)
+								{
+									document.getElementById("I91").style.display = "none";
+									
+									}
+								else if(value57!=0)
+								{
+									document.getElementById("DI92").style.display = "none";
+									document.getElementById("I92").style.display = "none";
+								
+									}
+								else if(value58!=0)
+								{
+									document.getElementById("DI93").style.display = "none";
+									document.getElementById("I93").style.display = "none";
+									
+									}
+
+								else if(value59!=0)
+								{
+									document.getElementById("DI94").style.display = "none";
+									document.getElementById("I94").style.display = "none";
+								
+									}
+								}
+			</script>
+			<script type="text/javascript"></script>
+			<script type="text/javascript">
+				window.onbeforeunload = function() {
+    localStorage.setItem("I33", $('I33').val());
+}
+			</script>
+			<script>
+				$(document).ready(function(){
+					$('.sidenav').sidenav();
+				})
+			</script>
+            <script>
+                var instance;
+                function isDefined(value) {
+  return typeof value !== "undefined";
+}
+
+            	$(document).ready(function(){
+var elem = document.querySelector('.collapsible.expandable');
+var instance = M.Collapsible.init(elem, {
+  accordion: false
+});
+    
+      // instance.select('test2');
+
+  });
+            </script>
